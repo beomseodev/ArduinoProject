@@ -9,9 +9,12 @@
  *   보드: "Arduino AVR Boards" → Arduino Mega or Mega 2560
  *   포트: 장치 관리자/IDE에서 Mercury에 해당하는 COM 포트
  *
- * 수정일: 2026-04-15
- * 변경: 최초 작성 — LED 깜빡임으로 연결 확인
+ * 수정 이력:
+ *   2026-04-15 — 최초 작성(LED 깜빡임 연결 확인)
+ *   2026-04-15 — IDE(clang) 분석용 `#include <Arduino.h>` 추가, compile_commands 상대 경로 정합
  */
+
+#include <Arduino.h>  // LED_BUILTIN, pinMode, delay 등 — 에디터 정적 분석용
 
 void setup() {
   // 내장 LED 핀을 출력으로 설정 (Mega 계열에서는 보통 13번 = LED_BUILTIN)

@@ -10,10 +10,12 @@
  *
  * 라이브러리 매니저: "Adafruit PWM Servo Driver" 설치 (의존성 Adafruit BusIO 등 함께 설치됨)
  *
- * 수정일: 2026-04-15
- * 변경: 최초 작성 — SG90 중앙·좌·우 펄스 테스트 (50Hz, 채널 0)
+ * 수정 이력:
+ *   2026-04-15 — 최초 작성(SG90 중앙·좌·우 펄스, 50Hz, 채널 0)
+ *   2026-04-15 — IDE(clang) 분석용 `#include <Arduino.h>` 추가
  */
 
+#include <Arduino.h>  // delay, uint8_t 등 — 에디터 정적 분석용
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 

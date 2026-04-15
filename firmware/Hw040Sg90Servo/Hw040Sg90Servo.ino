@@ -8,10 +8,12 @@
  *
  * 라이브러리: Adafruit PWM Servo Driver (+ 의존성)
  *
- * 수정일: 2026-04-15
- * 변경: 최초 작성 — 인코더 스텝으로 펄스 폭 조절, 버튼으로 중앙(1400us) 리셋
+ * 수정 이력:
+ *   2026-04-15 — 최초 작성(인코더로 펄스 폭 조절, 버튼으로 중앙 리셋)
+ *   2026-04-15 — IDE(clang) 분석용 `#include <Arduino.h>` 추가
  */
 
+#include <Arduino.h>  // uint8_t, Serial 등 — 에디터 정적 분석용
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 

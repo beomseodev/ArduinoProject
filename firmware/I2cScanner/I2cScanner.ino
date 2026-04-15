@@ -7,11 +7,14 @@
  *
  * 시리얼 모니터: 9600 baud, 개행(LF) 권장
  *
- * 수정일: 2026-04-15
- * 변경: 최초 작성 — I2C 스캐너로 버스 응답 확인
+ * 수정 이력:
+ *   2026-04-15 — 최초 작성(I2C 스캐너)
+ *   2026-04-15 — Cursor/clangd: 프로젝트 루트 compile_commands.json·.vscode 설정으로 분석 경로 보강
+ *   2026-04-15 — IDE 정적 분석용 `#include <Arduino.h>` 추가(Serial·delay 등 인식, 업로드 동작 동일)
  */
 
-#include <Wire.h>  // 아두이노 기본 I2C(와이어) 라이브러리 — 별도 설치 없음
+#include <Arduino.h>  // Serial, byte, delay, 핀 상수 등 — IDE 정적 분석용(빌드 시에도 Arduino가 동일 포함)
+#include <Wire.h>     // 아두이노 기본 I2C(와이어) 라이브러리 — 별도 설치 없음
 
 void setup() {
   Wire.begin();  // I2C 마스터로 시작 (Mega: 기본 SDA 20, SCL 21)

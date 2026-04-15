@@ -9,9 +9,12 @@
  * 참고: 폴링 방식이라 빠르게 돌리면 펄스를 놓치거나 채터링으로 여러 줄이 나올 수 있음.
  *       방향이 반대로 보이면 CLK/DT 배선을 바꾸거나 판별 조건을 뒤집으면 됨.
  *
- * 수정일: 2026-04-15
- * 변경: 최초 작성 — HW-040 회전·버튼 테스트 (내부 풀업)
+ * 수정 이력:
+ *   2026-04-15 — 최초 작성(HW-040 회전·버튼, 내부 풀업)
+ *   2026-04-15 — IDE(clang) 분석용 `#include <Arduino.h>` 추가
  */
+
+#include <Arduino.h>  // Serial, pinMode, digitalRead 등 — 에디터 정적 분석용
 
 const int CLK_PIN = 29;  // HW-040 CLK
 const int DT_PIN = 28;   // HW-040 DT

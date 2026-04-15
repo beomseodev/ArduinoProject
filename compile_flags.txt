@@ -1,0 +1,13 @@
+-xc++
+-std=gnu++11
+-DARDUINO=10819
+-DARDUINO_AVR_MEGA2560
+-DARDUINO_ARCH_AVR
+-DF_CPU=16000000L
+-IC:/Users/polar/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.7/cores/arduino
+-include
+Arduino.h
+-IC:/Users/polar/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.7/variants/mega
+-IC:/Users/polar/AppData/Local/Arduino15/packages/arduino/hardware/avr/1.8.7/libraries/Wire/src
+-IC:/Users/polar/OneDrive/Documents/Arduino/libraries/Adafruit_PWM_Servo_Driver_Library
+-IC:/Users/polar/OneDrive/Documents/Arduino/libraries/Adafruit_BusIO
